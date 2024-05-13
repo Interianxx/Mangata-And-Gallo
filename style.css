@@ -1,0 +1,394 @@
+/* Aquí uso fonts de google para añadir un estilo de letra importándola*/
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+/* Aquí simplemente asigno margenes y rellenos en cero para evitar problemas entre navegadores*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Reddit Sans', sans-serif;
+}
+
+nav{
+    background: rgb(0, 0, 0);
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/** Media query para adaptar dependiendo del tamaño de la ventana **/
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: #1b9bff;
+        transition: .5s;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+/** Sección de inicio **/
+
+#inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 40px;
+}
+
+.descripción {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.descripción span{
+    color: red;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 12px 145px;
+}
+
+.descripción h3 {
+    font-size: 1.2rem;
+    color: #2b2b2b;
+    font-weight: 700;
+    padding: 15px 180px;
+}
+
+.descripción-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.descripción-box{
+    width: 350px;
+    background-color: #ffffff;
+    border: 1.4px solid #ececec;
+    margin: 20px;
+}
+
+.descripción-img{
+    width: 100%;
+    height: auto;
+}
+
+.descripción-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.descripción-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.descripción-text span{
+    color: red;
+    font-size: 1rem;
+    padding-bottom: 10px;
+}
+
+.descripción-text .descripción-titulo{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #272727;
+}
+
+.descripción-text .descripción-titulo:hover{
+    color: red;
+    transition: all ease 0.3s;
+}
+
+.descripción-text p{
+    font-size: 1rem;
+    color: #9b9b9b;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.descripción-text a{
+    color: #0f0f0f;
+}
+
+.descripción-text a:hover{
+    color: red;
+    transition: all ease 0.3s;
+}
+
+@media (max-width: 952px) {
+    .descripción span , .descripción h3{
+        padding: 10px;
+    }
+
+}
+
+/** Footer **/
+
+@media (max-width: 952px) {
+    .footer{
+        position: static;
+    }
+}
+
+.footer-distributed{
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    widows: 100%;
+    text-align: left;
+    font: bold 16px;
+    padding: 50px 0px 60px 200px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-distributed .footer-left {
+    width: 30%;
+
+}
+
+.footer-distributed h3{
+    color: #ffffff;
+    font: normal 36px, cursive;
+    margin: 0;
+} 
+
+.footer-distributed h3 span{
+    color: #e0ac1c;
+} 
+
+.footer-distributed .footer-links{
+    color: #fff;
+    margin: 20px 0 12px;
+} 
+
+.footer-distributed .footer-links a{
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+} 
+
+.footer-distributed .footer-company-name{
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+} 
+
+.footer-distributed .footer-center{
+    width: 30%;
+    margin-top: -17px;
+} 
+
+.footer-distributed .footer-center i{
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+} 
+
+.footer-distributed .footer-center i .fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+} 
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span{
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a{
+    color: #e0ac1c;
+    text-decoration: none;
+}
+
+.footer-distributed .footer-right{
+    width: 25%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons i{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover{
+    background-color: #3f71ea;
+    transition: all 0.3s;
+}
+
+.footer-links a:hover{
+    color: #3f71ea;
+}
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        padding: 50px 60px 60px 60px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+}
